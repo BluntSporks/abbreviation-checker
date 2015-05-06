@@ -20,16 +20,12 @@ The program runs in one of two modes:
 * File checking, where it checks all the names in a file and suggests abbreviations.
 * Word checking, where you check if an abbreviation follows all the rules for its long form.
 
-### File checking
-    abbreviation-checker -lang [language] -file [filename]
+Usage:
+    abbreviation-checker [-lang=LANGUAGE] -file=FILENAME
+    abbreviation-checker -short=SHORTFORM -long=LONGFORM
 
 Arguments:
-* lang: Use either go or php as language value to ignore keywords from that language. Argument is optional.
-* file: Provide filename of source code to check.
-
-### Word checking
-    abbreviation-checker -short [short] -long [long]
-
-Arguments:
-* short: Short, or abbreviated, form that you are checking.
-* long: Original long form that it is being checked against.
+    -lang=LANGUAGE    Programming languages whose keywords should be ignored
+    -file=FILENAME    Name of file to check
+    -short=SHORTFORM  Short form of word to check
+    -long=LONGFORM    Long form of word or acronym expansion to check against short form
