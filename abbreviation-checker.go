@@ -93,6 +93,10 @@ func checkWord(short string, long string) {
 		fmt.Println("Fail: Short form should have at least one vowel or y to make it pronounceable")
 		pass = false
 	}
+	if !abbr.IsLongEnough(short) {
+		fmt.Println("Fail: Short form should be at least 3 characters long")
+		pass = false
+	}
 	if !abbr.IsShortEnough(short, long) {
 		fmt.Println("Fail: Short form should be no more than half as long as long form")
 		pass = false
