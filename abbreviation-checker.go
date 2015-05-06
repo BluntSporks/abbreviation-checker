@@ -85,23 +85,29 @@ func checkFile(file string, lang string) {
 // checkWord checks a word.
 func checkWord(short string, long string) {
 	pass := true
-	if !abbr.AllLetters(short, long) {
-		fmt.Println("Fail: All letters of long form not found in same order in short form")
-		pass = false
-	}
-	if !abbr.HasVowel(short) {
-		fmt.Println("Fail: Short form should have at least one vowel or y to make it pronounceable")
-		pass = false
-	}
 	if !abbr.IsLongEnough(short) {
 		fmt.Println("Fail: Short form should be at least 3 characters long")
 		pass = false
 	}
-	if !abbr.IsShortEnough(short, long) {
-		fmt.Println("Fail: Short form should be no more than half as long as long form")
-		pass = false
-	}
-	if pass {
-		fmt.Println("Pass")
+	if abbr.IsAcronym(short, long) {
+		if pass {
+			fmt.Println("Pass, because good acronym")
+		}
+	} else {
+		if !abbr.AllLetters(short, long) {
+			fmt.Println("Fail: All letters of long form not found in same order in short form")
+			pass = false
+		}
+		if !abbr.HasVowel(short) {
+			fmt.Println("Fail: Short form should have at least one vowel or y to make it pronounceable")
+			pass = false
+		}
+		if !abbr.IsShortEnough(short, long) {
+			fmt.Println("Fail: Short form should be no more than half as long as long form")
+			pass = false
+		}
+		if pass {
+			fmt.Println("Pass, because good abbreviation")
+		}
 	}
 }
