@@ -21,10 +21,12 @@ The program runs in one of two modes:
 * Word checking, where you check if an abbreviation follows all the rules for its long form.
 
 Usage:
+
     abbreviation-checker [-lang=LANGUAGE] -file=FILENAME
     abbreviation-checker -short=SHORTFORM -long=LONGFORM
 
 Arguments:
+
     -lang=LANGUAGE    Programming languages whose keywords should be ignored
     -file=FILENAME    Name of file to check
     -short=SHORTFORM  Short form of word to check
