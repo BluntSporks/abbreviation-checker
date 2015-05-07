@@ -25,7 +25,7 @@ Usage:
     abbreviation-checker [-lang=LANGUAGE] -file=FILENAME
     abbreviation-checker -short=SHORTFORM -long=LONGFORM
 
-Arguments:
+Options:
 
     -lang=LANGUAGE    Programming languages whose keywords should be ignored
     -file=FILENAME    Name of file to check
