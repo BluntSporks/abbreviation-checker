@@ -22,12 +22,12 @@ The program runs in one of two modes:
 
 Usage:
 
-    abbreviation-checker [-lang=LANGUAGE] -file=FILENAME
+    abbreviation-checker [-lang=(go|php)] -file=FILENAME
     abbreviation-checker -short=SHORTFORM -long=LONGFORM
 
 Options:
 
-    -lang=LANGUAGE    Programming languages whose keywords should be ignored
+    -lang=(go|php)    Programming languages whose keywords should be ignored
     -file=FILENAME    Name of file to check
     -short=SHORTFORM  Short form of word to check
     -long=LONGFORM    Long form of word or acronym expansion to check against short form
